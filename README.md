@@ -1,7 +1,7 @@
-###Overview
+### Overview
 The dataset captures sensory-motor and video data for anomalous events during the Kitting. The dataset consists of 538 rosbags. 85 of those rosbags are paired with RGB video that was captured by an external camera placed directly in front of the robot. The size of the 538 rosbags is of 37GB whilst the size of all videos is of 3.1GB. The dataset is found as Extension 2 in the paper as well as in \cite{2018IJRR-supplement}.
 
-###Data Description
+### Data Description
 The main content of our data-set is the sensory-motor recordings of the robot manipulator's experience while performing the manipulation task. Original experiments were conducted in the Rethink Baxter robot and we used the following data modalities:
 - the right endpoint state: contains end-effector pose, twist, and a wrench defined from the joint torques (not used).
 - the stamped wrench: obtained from a Robotiq FT 180 force-torque sensor installed on the right wrist (see Fig. \ref{fig:experimental_setup}).
@@ -29,5 +29,5 @@ The dataset is composed of folders that use the format: ''experiment_at_[time]''
 ### Anomaly Data Extraction
 To extract anomaly data, one should first focus on the topic ''/anomaly_detection_signal'' whose messages are effectively timestamps indicating when anomalies were identified. It's worth noting that a burst of anomaly timestamps might have been published to this topic for one anomaly. Therefore timestamps that are adjacent in time should be ignored. We recommend ignoring a timestamp if its distance to its precursor is less than 1 second. After anomaly timestamps are extracted, labels in the accompanied ''anomaly_labels.txt'' can be paired accordingly. 
 
-%  Corrupted data
+###  Corrupted data
 We have tried to clear the dataset of any corrupted trials. However, if the number of anomaly timestamps does not equal to the number of labels, that experiment should be discarded. 
