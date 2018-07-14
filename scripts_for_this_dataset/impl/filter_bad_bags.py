@@ -11,7 +11,6 @@ topics_to_check = set([
     '/TactileSensor4/Gyroscope',
     '/TactileSensor4/Magnetometer',
     '/TactileSensor4/StaticData',
-    '/anomaly_detection_signal',
     '/robot/limb/right/endpoint_state',
     '/robotiq_force_torque_wrench'])
 
