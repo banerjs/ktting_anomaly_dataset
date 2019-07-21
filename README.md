@@ -1,6 +1,12 @@
 ### Overview
 The dataset captures sensory-motor and video data for anomalous events during the Kitting. The dataset consists of 538 rosbags. 85 of those rosbags are paired with RGB video that was captured by an external camera placed directly in front of the robot. The size of the 538 rosbags is of 37GB whilst the size of all videos is of 3.1GB. The dataset is found as Extension 2 in the paper as well as in \cite{2018IJRR-supplement}.
 
+### Code Dependencies
+
+The code and data in this dataset requires the following:
+
+- [rostopics_to_timeseries](https://github.com/birlrobotics/rostopics_to_timeseries)
+
 ### Data Description
 The main content of our data-set is the sensory-motor recordings of the robot manipulator's experience while performing the manipulation task. Original experiments were conducted in the Rethink Baxter robot and we used the following data modalities:
 - the right endpoint state: contains end-effector pose, twist, and a wrench defined from the joint torques (not used).
